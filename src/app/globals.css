@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-premium-black: #050505;
+  --color-navy-blue: #0a192f;
+  --color-accent-blue: #dadada;
+  --color-glass-white: rgba(255, 255, 255, 0.05);
+  
+  --font-sans: "Inter", sans-serif;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+/* Custom Font Class */
+.font-gilroy {
+  font-family: "Gilroy", "Inter", sans-serif;
+}
+
+:root {
+  --background: #050505;
+  --foreground: #ffffff;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Lenis Scroll */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
